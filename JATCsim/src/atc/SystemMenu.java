@@ -29,11 +29,16 @@ public class SystemMenu extends JFrame implements ActionListener, WindowListener
     private User
 	loggedInUser;
 	
+    /**
+     * No-arg constructor for the SystemMenu
+     * @param loggedInUser
+     */
 	public SystemMenu(User loggedInUser){
 		window.setTitle("System Menu");
 		
 		SpringLayout spring = new SpringLayout();
 		
+		//Aligns and sets a listener for all the menu buttons.
 		startSimButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 		startSimButton.addActionListener(this);
 		testHistory.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -43,17 +48,20 @@ public class SystemMenu extends JFrame implements ActionListener, WindowListener
 		testScores.setAlignmentX(Component.CENTER_ALIGNMENT);
 		testScores.addActionListener(this);
 		
+		//Restricts the window size.
 		window.setSize(220,650);
 		window.setLocation(30, 30);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setLayout( new BorderLayout() );
         window.setResizable(false);
         
+        //Sets up the button panel
         JPanel buttonPanel = new JPanel();
         BoxLayout boxLayout = new BoxLayout(buttonPanel, BoxLayout.Y_AXIS);
         buttonPanel.setLayout(boxLayout);
 		buttonPanel.setSize(220,200);
         
+		//Add the container window to our panel
         JPanel mainPanel = new JPanel( spring );
         window.add(mainPanel);
 		
@@ -63,14 +71,9 @@ public class SystemMenu extends JFrame implements ActionListener, WindowListener
 		scrollPanel.setPreferredSize(new Dimension(200, 440));
 		dispPanel.setBackground(Color.WHITE);
 		
+		//Adds a button panel atop a scrollpanel in our window which is in our main panel.
 		mainPanel.add(buttonPanel);
 		mainPanel.add(scrollPanel);
-		
-		
-		spring.putConstraint(SpringLayout.NORTH, buttonPanel, 10, SpringLayout.NORTH, mainPanel);
-		spring.putConstraint(SpringLayout.WEST, buttonPanel, 10, SpringLayout.WEST, mainPanel);
-		spring.putConstraint(SpringLayout.NORTH, scrollPanel, 180, SpringLayout.NORTH, mainPanel);
-		spring.putConstraint(SpringLayout.WEST, scrollPanel, 10, SpringLayout.WEST, mainPanel);
         
         JLabel text = new JLabel("Welcome to the Flight Simulator\n", JLabel.CENTER);
         text.setHorizontalTextPosition(JLabel.CENTER);
@@ -78,6 +81,7 @@ public class SystemMenu extends JFrame implements ActionListener, WindowListener
         
         text.setAlignmentX(Component.CENTER_ALIGNMENT);
         
+        //Adds the elements to the button panel.
         buttonPanel.add(text, BorderLayout.NORTH);
         buttonPanel.add(new JLabel() );
         buttonPanel.add(startSimButton);
