@@ -7,20 +7,33 @@ import java.awt.event.WindowListener;
 
 import javax.swing.JFrame;
 
+/**
+ * Holds all of the Simulator window panels and manages their data.
+ * @author jminer2
+ */
 public class Simulator implements Runnable, WindowListener{
 
 	private static AtcScreen atcscreen;
     private static JFrame frame;
 
+    /**
+     * Simulator's no-arg constructor
+     */
 	public Simulator(){
 		
 	}
 	
+	/**
+	 * Begins the simulation.
+	 */
 	public void run(){
         	createAndShowGUI();
         	startSim();
 	}
 	
+	/**
+	 * Initializes the simulator elements.
+	 */
 	private static void startSim(){
                 
         AirPlane ap1 = new AirPlane("a1", 50, 5, 100, 50000, "bogus1", 200, 200, 200, 10);
@@ -45,6 +58,7 @@ public class Simulator implements Runnable, WindowListener{
         atcscreen.addplane(ap1);
         atcscreen.addplane(ap2);
         
+        //Real-time screen updates occur here
         while(true)
         {  	
             try
@@ -60,6 +74,9 @@ public class Simulator implements Runnable, WindowListener{
         }
     }  
 	
+	/**
+	 * Displays the graphical elements to the simulator screen.
+	 */
 	private static void createAndShowGUI() {
 		//Make sure we have nice window decorations.
         JFrame.setDefaultLookAndFeelDecorated(true);

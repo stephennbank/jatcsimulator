@@ -27,8 +27,8 @@ package atc;
 import java.util.*;
 
 /**
- *
- * @author David
+ * Represents an AirPlane
+ * @author David the jATC open source author
  */
 public class AirPlane {
 
@@ -87,26 +87,45 @@ public class AirPlane {
 
     }  
     
+    /**
+     * Sets the heading
+     * @param heading
+     */
     public void SetClearHeading(int heading)
     {
         cl_heading = heading;
     }
     
+    /**
+     * Sets the altitude
+     * @param alt
+     */
     public void SetClearAlt(int alt)
     {
         cl_alt = alt;
     }
     
+    /**
+     * Sets the direction
+     * @param fix
+     */
     public void SetClearDirect(String fix)
     {
         cl_direct = fix;
     }
     
+    /**
+     * Sets the speed
+     * @param speed
+     */
     public void SetClearSpeed(int speed)
     {
         cl_speed = speed; 
     }
     
+    /**
+     * Contains the calculations representing the AirPlane object on the screen.
+     */
     public void PlaneProcess()
     {
         // get time 
@@ -297,6 +316,9 @@ public class AirPlane {
         IterTimeStamp = System.currentTimeMillis() / 1000;
     }
     
+    /**
+     * Displays the plane to the screen
+     */
     public void printPlane()
     {
         System.out.println("current speed = "+cu_speed + " cleared to "+cl_speed);
@@ -305,44 +327,80 @@ public class AirPlane {
         System.out.println("**************************************" + System.currentTimeMillis() / 1000);
     }
     
+    /**
+     * Getter for the plane's x coord
+     * @return posx
+     */
     public int getPosX()
     {
         return posx;
     }
+    /**
+     * Getter for the plane's y coord
+     * @return posy
+     */
     public int getPosY()
     {
         return posy;
     }
+    
+    /**
+     * Getter for the plane's call sign
+     * @return callsign
+     */
     public String getCallSign()
     {
         return callsign;
     }
+    
+    /**
+     * Getter for the plane's cu heading
+     * @return cu_heading
+     */
     public int getCuHeading()
     {
         return cu_heading;
     }
     
+    /**
+     * Getter for the plane's cl heading
+     * @return cl_heading
+     */
     public int getClHeading()
     {
         return cl_heading;
     }
     
+    /**
+     * Getter for the plane's cu altitude
+     * @return cu_alt
+     */
     public int getCuAlt()
     {
         return cu_alt;
     }
+    /**
+     * Getter for the plane's cl altitude
+     * @return cl_alt
+     */
     public int getClAlt()
     {
         return cl_alt;
     }
    
-    
+    /**
+     * Getter for the plane's cu speed
+     * @return cu_speed
+     */
     public int getCuSpeed()
     {
         return cu_speed;
     }
     
-
+    /**
+     * Getter for the plane's cl speed
+     * @return cl_speed
+     */
     public int getClSpeed()
     {
         return cl_speed;

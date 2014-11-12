@@ -1,5 +1,10 @@
 package atc;
 
+/**
+ * Represents a Student type User
+ * @author jminer2
+ *
+ */
 public class Student implements User {
 
 	

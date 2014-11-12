@@ -30,8 +30,8 @@ import java.awt.event.*;
 import javax.swing.*;
 
 /**
- *
- * @author David
+ * Displays a trail to indicate the prior locations of the airplane.
+ * @author David the jATC open source author
  */
 public class TrailComponent extends JLabel {
     

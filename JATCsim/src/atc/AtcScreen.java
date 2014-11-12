@@ -31,8 +31,8 @@ import java.util.*;
 
 
 /**
- *
- * @author  David
+ * The AtcScreen Object holds the planes and is a window inside the Simulator
+ * @author  David the jATC open source author
  */
 public class AtcScreen extends JPanel {
     
@@ -49,7 +49,10 @@ public class AtcScreen extends JPanel {
         setLayout( null );
     }
 
-    
+    /**
+     * Adds a plane object to the screen and displays it.
+     * @param airplane
+     */
     public void addplane(AirPlane airplane)
     {
         // add plane to a list for paint
@@ -70,6 +73,10 @@ public class AtcScreen extends JPanel {
     
     }
 
+    /**
+     * Resets the location for the plane label
+     * @param airplane
+     */
     public void updateLabelLocation(AirPlane airplane)
     {
         airplane.apLabel.setLocation(airplane.getPosX(), airplane.getPosY());
@@ -79,7 +86,10 @@ public class AtcScreen extends JPanel {
         }
         
     }
-
+    
+    /**
+     * Updates the airplane's location on the AirPlane
+     */
     public void update()
     {
         Iterator<AirPlane> it = planelist.iterator(); 

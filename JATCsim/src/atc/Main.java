@@ -28,13 +28,13 @@ package atc;
 import java.awt.*;
 import javax.swing.*;
 /**
- * ADD CREDITS
- * @author David
+ * Program starts here.
+ * @author jminer2
  */
 public class Main {
 
     /**
-     * @param args the command line arguments
+     * Begins execution of the program
      */
     public static void main(String[] args) {
   

@@ -32,8 +32,8 @@ import java.awt.event.*;
 import javax.swing.*;
 
 /**
- *
- * @author David
+ * Attaches the airplane's information label next to the coordinate of the airplane
+ * @author David the jATC open source author
  */
 public class LabelComponent extends JLabel implements MouseListener, MouseMotionListener {
     

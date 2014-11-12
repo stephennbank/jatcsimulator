@@ -1,5 +1,10 @@
 package atc;
 
+/**
+ * Represents an Administrator type User
+ * @author jminer2
+ *
+ */
 public class Administrator implements User{
 
 	

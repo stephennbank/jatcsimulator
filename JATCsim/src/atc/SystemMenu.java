@@ -8,6 +8,11 @@ import java.awt.event.WindowListener;
 
 import javax.swing.*;
 
+/**
+ * Holds the panels which direct control of the program's mani functionality.
+ * @author jminer2
+ *
+ */
 public class SystemMenu extends JFrame implements ActionListener, WindowListener {
 
 	private static final long serialVersionUID = 3019063753587570684L;

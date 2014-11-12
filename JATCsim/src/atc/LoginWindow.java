@@ -6,6 +6,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Displays the login window and takes the user's information. The login information is then
+ * compared to database records.
+ * @author jminer2
+ */
 public class LoginWindow extends JPanel implements ActionListener {
 	
 	//private String title = "Login Menu";
@@ -33,6 +38,10 @@ public class LoginWindow extends JPanel implements ActionListener {
 	private User
 	loggedInUser = new Student("aaa","aaa","john","smith","321 sesame st", false);
 	
+	/**
+	 * LoginWindow Constructor
+	 * @param s
+	 */
 	public LoginWindow(String s){
 		
 		GridLayout grid = new GridLayout(4,4);
@@ -80,9 +89,11 @@ public class LoginWindow extends JPanel implements ActionListener {
         panel.add(promptLabel);
         panel.add(new JLabel(""));
         
+        //Add the user name label and text entry field
         panel.add(userLabel);
         panel.add(userField);
         
+        //Add the password label and text entry field
         panel.add(passLabel);
         panel.add(passField);
         
@@ -97,6 +108,7 @@ public class LoginWindow extends JPanel implements ActionListener {
         window.setVisible(true);
 		
 	}
+	
 	
 	public static void main(String[] args){
 		
@@ -114,6 +126,10 @@ public class LoginWindow extends JPanel implements ActionListener {
 			
 	}
 	
+	/**
+	 * The entered login information is checked for input errors and then compared to the
+	 * database records.
+	 */
 	private void performLogin(){
 		boolean
 		userFound = false;
@@ -133,10 +149,17 @@ public class LoginWindow extends JPanel implements ActionListener {
 		}
 	}
 	
+	/**
+	 * Opens a new window to allow the user to recover his password.
+	 */
 	private void performForgotPassword(){
 		System.out.println("Forgot");
 	}
 	
+	/**
+	 * Performs the database check
+	 * @return true if the user/pass was found
+	 */
 	private boolean searchForUser(){
 		return true;
 	}
