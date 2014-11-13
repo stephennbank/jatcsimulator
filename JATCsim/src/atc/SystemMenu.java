@@ -156,7 +156,6 @@ public class SystemMenu extends JFrame implements ActionListener, WindowListener
 	public static void main(String[] args){
 		
 		new SystemMenu(new Student("aaa", "aaa", "john", "smith", "123 sesame st", false));
-	
 	}
 	
 }

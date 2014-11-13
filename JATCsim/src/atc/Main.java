@@ -42,6 +42,6 @@ public class Main {
     	
     	new LoginWindow(programTitle);
     	
-    }  
+    }
     
 }
